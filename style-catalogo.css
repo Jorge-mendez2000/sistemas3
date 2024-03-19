@@ -113,6 +113,22 @@ td,th{
 .banner{
     width: 100%;
 }
+/*
+main > p {  Seleccionar hijos 
+    color: red; 
+}
+img + p {   Seleccionar hijos
+    backgroung: yellow;
+}
+img ~ p {  Seleccionar todos 
+    background: green;
+}
+
+principal p:not(#id){ Todo exepto 
+    background: orenge;
+    width : calc(40%-(26px*4))
+}
+*/
 .titulo-principal{
     text-align: center;
     font-size: 2em;
@@ -159,6 +175,7 @@ td,th{
 }
 .diferenciales{
     background: rgb(128, 128, 128);
+    /*background: rgba(24, 23, 23, 0.801);   Tranparencia*/ 
     padding: 20px;
 }
 
@@ -187,11 +204,40 @@ td,th{
 }
 .imagendiferencial{
     width: 60%;
+    
+}
+.imagendiferencial:hover{
+    opacity: 0.8;
+    transition: 400ms;
+    box-shadow: 0 0 25px black;
 }
 
 .video{
-    width: 560px;
+    width: 100%;
     margin:  auto;
     padding: 2em 0 0 0;
 }
 
+@media screen and (max-width:480px){
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+    nav li{
+        display: block;
+    }
+    .contenido-diferencial{
+        width: 100%;
+        padding: 0;
+    }
+    .caja,.principal,.video{
+        width: auto;
+
+    }
+    .lista-diferenciales, .imagendiferencial{
+        width: 100%;
+    }
+
+}
